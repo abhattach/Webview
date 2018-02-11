@@ -31,7 +31,50 @@
          fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-ixsdk'));
         </script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                    appId            : '591024921243500',
+                    autoLogAppEvents : true,
+                    xfbml            : true,
+                    version          : 'v2.12'
+                    });
+        };
+    
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+        </script>
 <h1 style="margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Facebook Test Page</b></span></h1>
 <p class="p2"><span class="s1">I'm hosted with GitHub Pages.</span></p>
+
+<div class="fb-messenger-checkbox"
+    origin=<PAGE_DOMAIN>
+    page_id=<PAGE_ID>
+        messenger_app_id=<APP_ID>
+            user_ref="<UNIQUE_REF_PARAM>"
+                prechecked="<true | false>"
+                    allow_login="<true>"
+                        size="<small | medium | large | standard | xlarge>">
+</div>
+
+FB.Event.subscribe('messenger_checkbox', function(e) {
+console.log("messenger_checkbox event");
+console.log(e);
+
+if (e.event == 'rendered') {
+console.log("Plugin was rendered");
+} else if (e.event == 'checkbox') {
+var checkboxState = e.state;
+console.log("Checkbox state: " + checkboxState);
+} else if (e.event == 'not_you') {
+console.log("User clicked 'not you'");
+} else if (e.event == 'hidden') {
+console.log("Plugin was hidden");
+}
 </body>
 </html>
