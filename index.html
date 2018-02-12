@@ -20,6 +20,25 @@
     
 </head>
 <body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                    appId            : '591024921243500',
+                    autoLogAppEvents : true,
+                    xfbml            : true,
+                    version          : 'v2.12'
+                    });
+        };
+    
+        (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
     <input type="file" accept="image/*" id="image-input" capture="user" />
     <label for="state">State</label>
     <input autocomplete="address-level1" id = "state"><br>
@@ -49,24 +68,7 @@
          fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-ixsdk'));
         </script>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                    appId            : '591024921243500',
-                    autoLogAppEvents : true,
-                    xfbml            : true,
-                    version          : 'v2.12'
-                    });
-        };
     
-    (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-        </script>
 <h1 style="margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Facebook Test Page</b></span></h1>
 <p class="p2"><span class="s1">I'm hosted with GitHub Pages.</span></p>
 
