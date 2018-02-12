@@ -38,15 +38,16 @@
          fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="fb-messenger-checkbox"
-        origin=github.io
-        page_id=141010873240884
-        messenger_app_id=591024921243500
-        user_ref="1"
-        prechecked="true"
-        allow_login="true"
-        size="medium">
-    </div>
+    
+    <script>
+        (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/platform.Extensions.js";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-ixsdk'));
+    </script>
     
     <input type="file" accept="image/*" id="image-input" capture="user" />
     <label for="state">State</label>
@@ -68,18 +69,9 @@
     <label for="telnum">Tel Num</label>
     <input autocomplete="tel" id = "telnum"><br>
     
-    <script>
-        (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/platform.Extensions.js";
-         fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-ixsdk'));
-        </script>
     
     <div class="fb-messenger-checkbox"
-        origin=github.io
+        origin=abhattach.github.io
         page_id=141010873240884
         messenger_app_id=591024921243500
         user_ref="1"
